@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Dashboard para Abogados">
+    <meta name="author" content="">
+
+    <title>Dashboard - Abogado</title>
+
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    
+    <style>
+        .kpi-card {
+            border: 1px solid #cce5ff; /* Color de borde similar al azul claro */
+            background-color: #e6f3ff; /* Fondo similar al azul claro */
+            color: #155724;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 68, 0.15) !important;
+        }
+
+        .kpi-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #3f6595;
+            margin-bottom: 5px;
+        }
+
+        .kpi-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #2c3e50; /* Color de texto oscuro */
+        }
+        
+        .alerta-urgente {
+            color: #dc3545; /* Rojo de Bootstrap */
+            font-weight: bold;
+        }
+
+        .alerta-importante {
+            color: #ffc107; /* Amarillo de Bootstrap */
+            font-weight: bold;
+        }
+        
+        .circle-rojo {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #dc3545;
+            margin-right: 5px;
+        }
+        
+        .circle-amarillo {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ffc107;
+            margin-right: 5px;
+        }
+    </style>
+    
+</head>
+
+<body id="page-top">
+
+    <div id="wrapper">
+
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <div id="content">
+
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    </nav>
+                <div class="container-fluid">
+
+                    <h1 class="h3 mb-4 text-gray-800">Bienvenido Abogado</h1>
+                    
+                    <div class="row mb-4">
+                        <div class="col-lg-12">
+                            <h4 class="h5 mb-2 text-gray-800">Alertas <span class="circle-rojo"></span> Urgente <span class="circle-amarillo"></span> Importante</h4>
+                            <div class="card shadow mb-4">
+                                <div class="card-body p-0">
+                                    <table class="table table-bordered m-0">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" style="width: 40%;">Alerta</th>
+                                                <th scope="col" style="width: 30%;">Caso</th>
+                                                <th scope="col" style="width: 30%;">Fecha límite</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="circle-rojo"></span> Se debe entregar documentación</td>
+                                                <td>CS001</td>
+                                                <td class="alerta-urgente">2025-11-13</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="circle-amarillo"></span> Se debe asistir a audiencia</td>
+                                                <td>CS002</td>
+                                                <td class="alerta-importante">2025-11-20</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2 class="h4 mb-4 text-gray-800">KPIs</h2>
+
+                    <div class="row">
+
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="kpi-card h-100">
+                                <div class="kpi-title">Casos</div>
+                                <div class="kpi-value">20</div>
+                                <div>Completado</div>
+                                <hr class="sidebar-divider my-2">
+                                <div class="kpi-title">Clientes</div>
+                                <div class="kpi-value">31</div>
+                                <div>Total</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="kpi-card h-100">
+                                <div class="kpi-title">Casos</div>
+                                <div class="kpi-value">3</div>
+                                <div>Pendientes</div>
+                                <hr class="sidebar-divider my-2">
+                                <div class="kpi-title">Ganancias</div>
+                                <div class="kpi-value">5.000</div>
+                                <div>Dolares</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+                            <div class="card shadow mb-4 h-100">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Gráfico</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img src="https://www.santanderopenacademy.com/es/blog/tipos-de-graficos-en-excel/_jcr_content/root/container/responsivegrid/image_1238827714.coreimg.png/1711401591797/ev-ingresos.png" alt="Gráfico de Ventas Mensuales" class="img-fluid" style="border: 1px solid #ccc; padding: 10px;">
+                                    </div>
+                                    <p class="text-center mt-2 small text-muted">Gráfico de Ventas (Representación estática)</p>
+                                    
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; LEXIA</span>
+                    </div>
+                </div>
+            </footer>
+            </div>
+        </div>
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </body>
+
+</html>
