@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Gestión de Pagos</h1>
+    <h1 class="h3 mb-0 text-gray-800">Pagos</h1>
     <button
       class="btn btn-sm btn-primary shadow-sm"
       data-bs-toggle="modal"
@@ -19,11 +19,9 @@
               <div
                 class="text-xs font-weight-bold text-primary text-uppercase mb-1"
               >
-                Total Pagos
+                Total Ingresos
               </div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800">
-                $215,450.00
-              </div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">$114,300</div>
             </div>
             <div class="col-auto">
               <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -33,11 +31,9 @@
       </div>
     </div>
 
-  </div>
-
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Listado de Pagos</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Historial de Pagos</h6>
     </div>
     <div class="card-body">
       <div class="row mb-3">
@@ -74,7 +70,7 @@
       </div>
 
       <div class="table-responsive">
-        <table class="table table-bordered table-hover" id="tablaPagos">
+        <table class="table table-bordered table-hover">
           <thead class="table-light">
             <tr>
               <th>ID</th>
@@ -89,7 +85,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>001</td>
+              <td><strong>Pg001</strong></td>
               <td>Juan Pérez García</td>
               <td>Divorcio Express</td>
               <td>$5,500.00</td>
@@ -121,7 +117,7 @@
               </td>
             </tr>
             <tr>
-              <td>002</td>
+              <td><strong>Pg002</strong></td>
               <td>María López Sánchez</td>
               <td>Defensa Penal</td>
               <td>$12,000.00</td>
@@ -153,7 +149,7 @@
               </td>
             </tr>
             <tr>
-              <td>003</td>
+              <td><strong>Pg003</strong></td>
               <td>Carlos Ramírez Ortiz</td>
               <td>Demanda Laboral</td>
               <td>$8,750.00</td>
@@ -185,7 +181,7 @@
               </td>
             </tr>
             <tr>
-              <td>004</td>
+              <td><strong>Pg004</strong></td>
               <td>Ana Martínez Cruz</td>
               <td>Contrato Mercantil</td>
               <td>$15,000.00</td>
@@ -217,7 +213,7 @@
               </td>
             </tr>
             <tr>
-              <td>005</td>
+              <td><strong>Pg005</strong></td>
               <td>Roberto Gómez Flores</td>
               <td>Custodia de Menores</td>
               <td>$6,200.00</td>
@@ -249,7 +245,7 @@
               </td>
             </tr>
             <tr>
-              <td>006</td>
+              <td><strong>Pg006</strong></td>
               <td>Laura Hernández Ruiz</td>
               <td>Asesoría Fiscal</td>
               <td>$20,000.00</td>
@@ -281,7 +277,7 @@
               </td>
             </tr>
             <tr>
-              <td>007</td>
+              <td><strong>Pg007</strong></td>
               <td>Pedro Torres Mendoza</td>
               <td>Demanda Civil</td>
               <td>$9,500.00</td>
@@ -313,7 +309,7 @@
               </td>
             </tr>
             <tr>
-              <td>008</td>
+              <td><strong>Pg008</strong></td>
               <td>Sofía Castillo Vargas</td>
               <td>Apelación Penal</td>
               <td>$18,300.00</td>
@@ -345,7 +341,7 @@
               </td>
             </tr>
             <tr>
-              <td>009</td>
+              <td><strong>Pg009</strong></td>
               <td>Luis Fernando Díaz</td>
               <td>Testamento y Herencia</td>
               <td>$7,800.00</td>
@@ -377,7 +373,7 @@
               </td>
             </tr>
             <tr>
-              <td>010</td>
+              <td><strong>Pg010</strong></td>
               <td>Patricia Morales Vega</td>
               <td>Indemnización Laboral</td>
               <td>$11,250.00</td>
@@ -471,7 +467,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Nuevo Pago</h5>
+        <h5 class="modal-title">Registrar Nuevo Pago</h5>
         <button
           type="button"
           class="btn-close"
@@ -482,72 +478,132 @@
         <form>
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label class="form-label">Cliente</label>
-              <select class="form-select">
-                <option>Seleccione un cliente</option>
-                <option>Juan Pérez García</option>
-                <option>María López Sánchez</option>
-                <option>Carlos Ramírez Ortiz</option>
-              </select>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label class="form-label">Caso</label>
-              <select class="form-select">
-                <option>Seleccione un caso</option>
-                <option>Divorcio Express</option>
-                <option>Defensa Penal</option>
-                <option>Demanda Laboral</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label class="form-label">Monto</label>
-              <div class="input-group">
-                <span class="input-group-text">$</span>
-                <input type="number" class="form-control" step="0.01" />
+              <label class="form-label">ID de Pago</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Pg001"
+                pattern="Pg[0-9]{3}"
+                title="Formato: Pg001, Pg002, etc."
+                required
+                readonly
+                value="Pg011"
+              />
+              <div class="invalid-feedback">
+                El ID debe tener el formato Pg001, Pg002, etc.
               </div>
             </div>
             <div class="col-md-6 mb-3">
-              <label class="form-label">Fecha</label>
-              <input type="date" class="form-control" />
+              <label class="form-label"
+                >Nombre Completo del Cliente
+                <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ingrese el nombre completo del cliente"
+                minlength="3"
+                maxlength="100"
+                required
+              />
+              <div class="invalid-feedback">
+                Por favor ingrese el nombre completo del cliente (mínimo 3
+                caracteres).
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label class="form-label">Método de Pago</label>
-              <select class="form-select">
-                <option>Seleccione método</option>
-                <option>Efectivo</option>
-                <option>Transferencia</option>
-                <option>Tarjeta</option>
-                <option>Cheque</option>
-              </select>
+              <label class="form-label"
+                >Descripción del Caso <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ej: Divorcio Express, Defensa Penal"
+                minlength="5"
+                maxlength="150"
+                required
+              />
+              <div class="invalid-feedback">
+                Ingrese una descripción del caso (mínimo 5 caracteres).
+              </div>
             </div>
             <div class="col-md-6 mb-3">
-              <label class="form-label">Estado</label>
-              <select class="form-select">
-                <option>Completado</option>
-                <option>Pendiente</option>
-                <option>Vencido</option>
+              <label class="form-label"
+                >Monto del Pago <span class="text-danger">*</span></label
+              >
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Ingrese el monto en dólares"
+                min="0.01"
+                step="0.01"
+                required
+              />
+              <div class="invalid-feedback">
+                Ingrese un monto válido mayor a 0.
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label"
+                >Fecha de Pago <span class="text-danger">*</span></label
+              >
+              <input type="date" class="form-control" required />
+              <div class="invalid-feedback">Seleccione la fecha del pago.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label"
+                >Método de Pago <span class="text-danger">*</span></label
+              >
+              <select class="form-select" required>
+                <option value="">Seleccione un método de pago</option>
+                <option value="Transferencia">Transferencia Bancaria</option>
+                <option value="Efectivo">Efectivo</option>
+                <option value="Tarjeta">Tarjeta de Crédito/Débito</option>
+                <option value="Cheque">Cheque</option>
               </select>
+              <div class="invalid-feedback">Seleccione un método de pago.</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label"
+                >Estado del Pago <span class="text-danger">*</span></label
+              >
+              <select class="form-select" required>
+                <option value="">Seleccione el estado</option>
+                <option value="Completado">Completado</option>
+                <option value="Pendiente" selected>Pendiente</option>
+                <option value="Vencido">Vencido</option>
+              </select>
+              <div class="invalid-feedback">Seleccione el estado del pago.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Número de Referencia</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ej: REF-2024-001 (opcional)"
+                pattern="[A-Z0-9-]+"
+                title="Solo letras mayúsculas, números y guiones"
+              />
+              <small class="text-muted"
+                >Opcional. Formato: letras mayúsculas, números y guiones.</small
+              >
             </div>
           </div>
           <div class="mb-3">
-            <label class="form-label">Referencia</label>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Ej: REF-2024-001"
-            />
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Notas</label>
+            <label class="form-label">Observaciones</label>
             <textarea
               class="form-control"
               rows="3"
-              placeholder="Observaciones adicionales"
+              placeholder="Agregue observaciones o notas adicionales (opcional)"
+              maxlength="500"
             ></textarea>
+            <small class="text-muted">Máximo 500 caracteres.</small>
           </div>
         </form>
       </div>
@@ -555,7 +611,7 @@
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cancelar
         </button>
-        <button type="button" class="btn btn-primary">Guardar</button>
+        <button type="submit" class="btn btn-primary">Guardar Pago</button>
       </div>
     </div>
   </div>
@@ -576,48 +632,133 @@
         <form>
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label class="form-label">Cliente</label>
-              <select class="form-select">
-                <option selected>Juan Pérez García</option>
-                <option>María López Sánchez</option>
-              </select>
+              <label class="form-label">ID de Pago</label>
+              <input type="text" class="form-control" value="Pg001" readonly />
             </div>
             <div class="col-md-6 mb-3">
-              <label class="form-label">Caso</label>
-              <select class="form-select">
-                <option selected>Divorcio Express</option>
-              </select>
+              <label class="form-label"
+                >Nombre Completo del Cliente
+                <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                value="Juan Pérez García"
+                placeholder="Ingrese el nombre completo del cliente"
+                minlength="3"
+                maxlength="100"
+                required
+              />
+              <div class="invalid-feedback">
+                Por favor ingrese el nombre completo del cliente (mínimo 3
+                caracteres).
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label class="form-label">Monto</label>
-              <div class="input-group">
-                <span class="input-group-text">$</span>
-                <input type="number" class="form-control" value="5500.00" />
+              <label class="form-label"
+                >Descripción del Caso <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                value="Divorcio Express"
+                placeholder="Ej: Divorcio Express, Defensa Penal"
+                minlength="5"
+                maxlength="150"
+                required
+              />
+              <div class="invalid-feedback">
+                Ingrese una descripción del caso (mínimo 5 caracteres).
               </div>
             </div>
             <div class="col-md-6 mb-3">
-              <label class="form-label">Fecha</label>
-              <input type="date" class="form-control" value="2024-11-01" />
+              <label class="form-label"
+                >Monto del Pago <span class="text-danger">*</span></label
+              >
+              <input
+                type="number"
+                class="form-control"
+                value="5500.00"
+                placeholder="Ingrese el monto en dólares"
+                min="0.01"
+                step="0.01"
+                required
+              />
+              <div class="invalid-feedback">
+                Ingrese un monto válido mayor a 0.
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label class="form-label">Método de Pago</label>
-              <select class="form-select">
-                <option>Efectivo</option>
-                <option selected>Transferencia</option>
-                <option>Tarjeta</option>
-              </select>
+              <label class="form-label"
+                >Fecha de Pago <span class="text-danger">*</span></label
+              >
+              <input
+                type="date"
+                class="form-control"
+                value="2024-11-01"
+                required
+              />
+              <div class="invalid-feedback">Seleccione la fecha del pago.</div>
             </div>
             <div class="col-md-6 mb-3">
-              <label class="form-label">Estado</label>
-              <select class="form-select">
-                <option selected>Completado</option>
-                <option>Pendiente</option>
+              <label class="form-label"
+                >Método de Pago <span class="text-danger">*</span></label
+              >
+              <select class="form-select" required>
+                <option value="">Seleccione un método de pago</option>
+                <option value="Transferencia" selected>
+                  Transferencia Bancaria
+                </option>
+                <option value="Efectivo">Efectivo</option>
+                <option value="Tarjeta">Tarjeta de Crédito/Débito</option>
+                <option value="Cheque">Cheque</option>
               </select>
+              <div class="invalid-feedback">Seleccione un método de pago.</div>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label"
+                >Estado del Pago <span class="text-danger">*</span></label
+              >
+              <select class="form-select" required>
+                <option value="">Seleccione el estado</option>
+                <option value="Completado" selected>Completado</option>
+                <option value="Pendiente">Pendiente</option>
+                <option value="Vencido">Vencido</option>
+              </select>
+              <div class="invalid-feedback">Seleccione el estado del pago.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Número de Referencia</label>
+              <input
+                type="text"
+                class="form-control"
+                value="REF-2024-001"
+                placeholder="Ej: REF-2024-001 (opcional)"
+                pattern="[A-Z0-9-]+"
+                title="Solo letras mayúsculas, números y guiones"
+              />
+              <small class="text-muted"
+                >Opcional. Formato: letras mayúsculas, números y guiones.</small
+              >
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Observaciones</label>
+            <textarea
+              class="form-control"
+              rows="3"
+              placeholder="Agregue observaciones o notas adicionales (opcional)"
+              maxlength="500"
+            >
+Pago realizado sin observaciones.</textarea
+            >
+            <small class="text-muted">Máximo 500 caracteres.</small>
           </div>
         </form>
       </div>
@@ -625,7 +766,7 @@
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cancelar
         </button>
-        <button type="button" class="btn btn-primary">Actualizar</button>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
       </div>
     </div>
   </div>
@@ -646,13 +787,26 @@
         <div class="row">
           <div class="col-md-6">
             <div class="card mb-3">
+              <div class="card-header bg-light">
+                <strong>Información del Pago</strong>
+              </div>
               <div class="card-body">
-                <h6 class="font-weight-bold">Información del Pago</h6>
-                <hr />
-                <p><strong>ID:</strong> 001</p>
+                <p><strong>ID:</strong> Pg001</p>
+                <p><strong>Cliente:</strong> Juan Pérez García</p>
+                <p><strong>Caso:</strong> Divorcio Express</p>
                 <p><strong>Monto:</strong> $5,500.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <div class="card-header bg-light">
+                <strong>Detalles de Transacción</strong>
+              </div>
+              <div class="card-body">
                 <p><strong>Fecha:</strong> 01/11/2024</p>
-                <p><strong>Método:</strong> Transferencia</p>
+                <p><strong>Método:</strong> Transferencia Bancaria</p>
+                <p><strong>Referencia:</strong> REF-2024-001</p>
                 <p>
                   <strong>Estado:</strong>
                   <span class="badge bg-success">Completado</span>
@@ -660,22 +814,22 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="card mb-3">
-              <div class="card-body">
-                <h6 class="font-weight-bold">Cliente y Caso</h6>
-                <hr />
-                <p><strong>Cliente:</strong> Juan Pérez García</p>
-                <p><strong>Caso:</strong> Divorcio Express</p>
-                <p><strong>Abogado:</strong> Lic. Roberto Martínez</p>
-              </div>
-            </div>
+        </div>
+        <div class="card">
+          <div class="card-header bg-light">
+            <strong>Observaciones</strong>
+          </div>
+          <div class="card-body">
+            <p>Pago realizado sin observaciones.</p>
           </div>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cerrar
+        </button>
+        <button type="button" class="btn btn-primary">
+          <i class="fas fa-file-pdf"></i> Descargar Comprobante
         </button>
       </div>
     </div>
@@ -694,18 +848,25 @@
         ></button>
       </div>
       <div class="modal-body text-center">
-        <i class="fas fa-trash fa-4x text-danger mb-3"></i>
-        <p>¿Está seguro de eliminar este pago?</p>
+        <i class="fas fa-exclamation-triangle fa-4x text-danger mb-3"></i>
+        <p class="lead">¿Está seguro de eliminar este pago?</p>
         <div class="alert alert-warning">
-          <strong>ID:</strong> 001<br />
+          <strong>ID:</strong> Pg001<br />
+          <strong>Cliente:</strong> Juan Pérez García<br />
           <strong>Monto:</strong> $5,500.00
         </div>
+        <p class="text-danger small">
+          <i class="fas fa-exclamation-circle"></i>
+          Esta acción no se puede deshacer.
+        </p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cancelar
         </button>
-        <button type="button" class="btn btn-danger">Eliminar</button>
+        <button type="button" class="btn btn-danger">
+          <i class="fas fa-trash"></i> Sí, Eliminar
+        </button>
       </div>
     </div>
   </div>
